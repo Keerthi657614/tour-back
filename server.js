@@ -8,6 +8,9 @@ const authRoute = require('./routes/auth');
 dotenv.config();
 
 const app = express();
+app.get('/', (req, res) => {
+  res.send('Server is up and running');
+});
 
 // Middleware
 app.use(cors()); // Enable CORS
